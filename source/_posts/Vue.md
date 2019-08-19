@@ -113,20 +113,7 @@ TypeScript 是一种由微软开发的自由和开源的编程语言。它是 Ja
 ### 微信小程序
 详见微信官网，这里就是介绍一个方便微信小程序 UI 开发的框架：WeUi
 
-## 后端技术
-前端人员为了方便开发也需要掌握一定的后端技术，但我们 Java 后台人员知道后台知识体系极其庞大复杂，所以为了方便前端人员开发后台应用，就出现了 NodeJS 这样的技术。
-
-NodeJS 的作者已经声称放弃 NodeJS（说是架构做的不好再加上笨重的 node_modules，可能让作者不爽了吧），开始开发全新架构的 Deno
-
-既然是后台技术，那肯定也需要框架和项目管理工具，NodeJS 框架及项目管理工具如下：
-
-- Express：NodeJS 框架
-- Koa：Express 简化版
-- NPM：项目综合管理工具，类似于 Maven 编译打包运行下载依赖,js依赖
-- YARN：NPM 的替代方案，类似于 Maven 和 Gradle 的关系
-    - Gradle和maven一样但效率更高
-
-#### 附：当前主流前端框架
+## 当前主流前端框架
 ### Vue.js
 ### iView
 iview 是一个强大的基于 Vue 的 UI 库，有很多实用的基础组件比 elementui 的组件更丰富，主要服务于 PC 界面的中后台产品。使用单文件的 Vue 组件化开发模式 基于 npm + webpack + babel 开发，支持 ES2015 高质量、功能丰富 友好的 API ，自由灵活地使用空间。
@@ -194,6 +181,18 @@ WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官
 官网地址
 Github
 
+## 后端技术
+前端人员为了方便开发也需要掌握一定的后端技术，但我们 Java 后台人员知道后台知识体系极其庞大复杂，所以为了方便前端人员开发后台应用，就出现了 NodeJS 这样的技术。
+
+NodeJS 的作者已经声称放弃 NodeJS（说是架构做的不好再加上笨重的 node_modules，可能让作者不爽了吧），开始开发全新架构的 Deno
+
+既然是后台技术，那肯定也需要框架和项目管理工具，NodeJS 框架及项目管理工具如下：
+
+- Express：NodeJS 框架
+- Koa：Express 简化版
+- NPM：项目综合管理工具，类似于 Maven 编译打包运行下载依赖,js依赖
+- YARN：NPM 的替代方案，类似于 Maven 和 Gradle 的关系
+    - Gradle和maven一样但效率更高
 
 ## 前后分离的演变史
 ### 为什么需要前后分离
@@ -294,20 +293,7 @@ ViewModel 是由前端开发人员组织生成和维护的视图数据层。在�
 - MVVM 框架已经把最脏最累的一块做好了，我们开发者只需要处理和维护 ViewModel，更新数据视图就会自动得到相应更新，真正实现 事件驱动编程。
 - View 层展现的不是 Model 层的数据，而是 ViewModel 的数据，由 ViewModel 负责与 Model 层交互，这就完全解耦了 View 层和 Model 层，这个解耦是至关重要的，它是前后端分离方案实施的重要一环。
 
-## Vue的学习
-**Vue学习的内容开始.**
-Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的**渐进式框架**，
-发布于 2014 年 2 月。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。
-Vue 的核心库只**关注视图层**，不仅易于上手，还便于与第三方库
-（如：vue-router，vue-resource，vuex）或既有项目整合。
-- 优雅降级: 向下兼容
-- 渐进增强: 内容为主,更具浏览器版本的不同,增加特效.向上兼容
-
-- Vue-router :前后端分离, 后台不可干涉前端功能,需要router做路由.
-- Vuex 状态管理框架;
-
-## MVVM 模式的实现者
-
+### MVVM 模式的实现者
 我们知道MVVM 表示如下：
 
 - Model：模型层，在这里表示 JavaScript 对象
@@ -321,6 +307,178 @@ Vue 的核心库只**关注视图层**，不仅易于上手，还便于与第三
 - ViewModel 能够观察到数据的变化，并对视图对应的内容进行更新
 - ViewModel 能够监听到视图的变化，并能够通知数据发生改变
 至此，我们就明白了，Vue.js 就是一个 MVVM 的实现者，他的核心就是实现了 DOM 监听 与 数据绑定
+
+# Vue的学习
+**Vue学习的内容开始.**
+Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的**渐进式框架**，
+发布于 2014 年 2 月。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。
+Vue 的核心库只**关注视图层**，不仅易于上手，还便于与第三方库
+（如：vue-router，vue-resource，vuex）或既有项目整合。
+- 优雅降级: 向下兼容
+- 渐进增强: 内容为主,更具浏览器版本的不同,增加特效.向上兼容
+
+- Vue-router :前后端分离, 后台不可干涉前端功能,需要router做路由.
+- Vuex 状态管理框架;
+
+## 安装
+- 如果想快速上手,直接引入生产环境的Vue,然后开始测试学习.
+~~~ javascript
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+~~~
+
+- 新建一个Vue程序
+利用npm 安装vue
+~~~ shell
+# 最新稳定版
+$ npm install vue
+~~~
+### 命令行工具 (CLI)
+`待完善`
+
+
+## 第一个Vue程序
+~~~ vue
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-vue</title>
+  </head>
+  <body>
+    <div id="app">
+      {{a}}
+    </div>
+
+    <!-- built files will be auto injected -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var vm = new Vue({
+        el:"#app",
+        data:{
+          a: "test"
+        }
+      })
+    </script>
+  </body>
+</html>
+~~~
+
+## Vue 语法
+- `v-if`
+~~~ vue
+    <div id="app">
+      <p v-if="a === 'a'">a</p>
+      <p v-if="a === 'b'">b</p>
+      <p v-if="a === 'c'">c</p>
+    </div>
+    
+   <script>
+         var vm = new Vue({
+           el:"#app",
+           data:{
+             a: "b",
+           }
+         })
+   </script> 
+~~~
+
+输出
+~~~ 
+b
+~~~
+
+- `v-for`
+~~~ vue
+<div id="app">
+      <ul>
+        <li v-for="item in items">
+          {{item}}
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      var vm = new Vue({
+        el:"#app",
+        data:{
+          items: ['张三', '李四', '王麻子']
+        }
+      })
+    </script>
+~~~ 
+输出
+![](v-for.png)
+
+- `v-on`
+~~~ vue
+<div id="app">
+      <button v-on:click="say()">
+        点击弹出
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var vm = new Vue({
+        el:"#app",
+        methods: {
+          say: function (event){
+            alert("hello vue")
+          }
+        }
+      })
+    </script>
+~~~
+输出
+![](v-on.png)
+
+第二种
+- `v-on`
+~~~ vue
+<div id="app">
+      <button v-on:click="say()">
+        点击弹出
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var vm = new Vue({
+        el:"#app",
+        data:{
+          msg:"hello vue[msg]"
+        },
+        methods: {
+          say: function (event){
+            alert(this.msg)
+          }
+        }
+      })
+    </script>
+~~~
+输出
+![](v-on1.png)
+
+## 使用 Axios 实现异步通信
+
+### 什么是 Axios
+Axios 是一个开源的可以用在浏览器端和 NodeJS 的异步通信框架，她的主要作用就是实现 AJAX 异步通信，其功能特点如下：
+
+- 从浏览器中创建 XMLHttpRequests
+- 从 node.js 创建 http 请求
+- 支持 Promise API
+    相当于guawa 链式编程 chain programing
+- 拦截请求和响应
+- 转换请求数据和响应数据
+- 取消请求
+- 自动转换 JSON 数据
+- 客户端支持防御 XSRF（跨站请求伪造）
+GitHub：https://github.com/axios/axios
+
+### 为什么要使用 Axios
+由于 Vue.js 是一个 视图层框架 并且作者（尤雨溪）严格准守 SoC （关注度分离原则），所以 Vue.js
+ 并不包含 AJAX 的通信功能，为了解决通信问题，作者单独开发了一个名为 vue-resource 的插件，
+ 不过在进入 2.0 版本以后停止了对该插件的维护并推荐了 Axios 框架
+
 
 
 ### 为什么要使用 Vue.js
@@ -352,5 +510,9 @@ Vue 的核心库只**关注视图层**，不仅易于上手，还便于与第三
 - destroyed 
 
 ## 参考资料
+
+> 李卫民的教程
 > https://www.funtl.com/zh/vue-prepare/
 > https://www.bilibili.com/video/av44230028/?p=1
+> Vue官网教程
+> https://cn.vuejs.org/v2/guide/installation.html
