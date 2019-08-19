@@ -8,7 +8,7 @@ tags: [Vue]
 ---
 
 # Vue学习记录
-这边博客为自己学习vue的记录.
+这边博客为自己学习vue的记录.开始篇幅较大,如果基础好的同学可以直接点击vue内容开始浏览.
 
 ## 学习之前了解
 
@@ -320,6 +320,23 @@ Vue 的核心库只**关注视图层**，不仅易于上手，还便于与第三
 - Vue-router :前后端分离, 后台不可干涉前端功能,需要router做路由.
 - Vuex 状态管理框架;
 
+### 为什么要使用 Vue.js
+- 轻量级，体积小是一个重要指标。Vue.js 压缩后有只有 20多kb （Angular 压缩后 56kb+，React 压缩后 44kb+）
+- 移动优先。更适合移动端，比如移动端的 Touch 事件
+- 易上手，学习曲线平稳，文档齐全
+- 吸取了 Angular（模块化）和 React（虚拟 DOM）的长处，并拥有自己独特的功能，如：计算属性
+- 开源，社区活跃度高
+
+## Vue.js 的两大核心要素
+### 数据驱动
+![](dataDriver.png)
+当你把一个普通的 JavaScript 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 
+把这些属性全部转为 getter/setter。Object.defineProperty 是 ES5 中一个无法 shim 的特性，
+这也就是为什么 Vue 不支持 IE8 以及更低版本浏览器。
+
+每个组件实例都有相应的 watcher 实例对象，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 setter 被调用时，会通知
+ watcher 重新计算，从而致使它关联的组件得以更新。
+
 ## 安装
 - 如果想快速上手,直接引入生产环境的Vue,然后开始测试学习.
 ~~~ javascript
@@ -335,6 +352,61 @@ $ npm install vue
 ### 命令行工具 (CLI)
 `待完善`
 
+### 组件化
+- 页面上每个独立的可交互的区域视为一个组件
+- 每个组件对应一个工程目录，组件所需的各种资源在这个目录下就近维护
+- 页面不过是组件的容器，组件可以嵌套自由组合（复用）形成完整的页面
+
+### Vue生命周期 
+- created: 比如钩子可以用来在一个实例被创建之后执行代码：
+- mounted
+- updated
+- destroyed 
+
+每个 Vue 实例在被创建时都要经过一系列的初始化过程 —— 例如，需要设置数据监听、编译模板、将实例挂载到 DOM 并在数据变化时更新 DOM 等。同时在这个过程中也会运行一些叫做生命周期钩子的函数，这给了用户在不同阶段添加自己的代码的机会。
+![](vueLifeLoop.jpg)
+比如 created 钩子可以用来在一个实例被创建之后执行代码：
+~~~ vue
+new Vue({
+  data: {
+    a: 1
+  },
+  created: function () {
+    // `this` 指向 vm 实例
+    console.log('a is: ' + this.a)
+  }
+})
+// => "a is: 1"
+~~~
+也有一些其它的钩子，在实例生命周期的不同阶段被调用，如 mounted、updated 和 destroyed。
+生命周期钩子的 this 上下文指向调用它的 Vue 实例。
+
+###钩子函数的触发时机
+#### beforeCreate
+在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
+
+#### created
+实例已经创建完成之后被调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算， watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。
+
+#### beforeMount
+在挂载开始之前被调用：相关的 render 函数首次被调用。
+
+#### mounted
+el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。
+
+#### beforeUpdate
+数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。 你可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。
+
+#### updated
+由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。
+
+当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。
+
+#### beforeDestroy
+实例销毁之前调用。在这一步，实例仍然完全可用。
+
+#### destroyed
+Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。
 
 ## 第一个Vue程序
 ~~~ vue
@@ -479,35 +551,53 @@ GitHub：https://github.com/axios/axios
  并不包含 AJAX 的通信功能，为了解决通信问题，作者单独开发了一个名为 vue-resource 的插件，
  不过在进入 2.0 版本以后停止了对该插件的维护并推荐了 Axios 框架
 
+### 第一个 Axios 应用程序
+咱们开发的接口大部分都是采用 JSON 格式，可以先在项目里模拟一段 JSON 数据，数据内容如下：
+
+~~~ vue
+<div id="app">
+    <div>名称: {{info.name}}</div>
+    <div>地址: {{info.address.country}} - {{info.address.city}} - {{info.address.street}}</div>
+    <div>链接: <a v-bind:href="info.url" target="_blank">{{info.name}}</a></div>
+    <!--友情链接: <a v-for="link in lnfo.links">link.name</a>-->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data(){
+      return{
+        info:{
+          name: null,
+          address:{
+            country: null,
+            city: null,
+            street: null
+          },
+          url:null,
+          links:[
+            {
+              name: null,
+              url: null
+            }
+          ]
+        }
+      }
+    },
+    mounted(){
+      axios
+        .get('src/assets/Demo.json')
+        .then(response => (this.info = response.data));
+    }
+  })
+</script>
+~~~
+结果输出
+![](axios.png)
 
 
-### 为什么要使用 Vue.js
-- 轻量级，体积小是一个重要指标。Vue.js 压缩后有只有 20多kb （Angular 压缩后 56kb+，React 压缩后 44kb+）
-- 移动优先。更适合移动端，比如移动端的 Touch 事件
-- 易上手，学习曲线平稳，文档齐全
-- 吸取了 Angular（模块化）和 React（虚拟 DOM）的长处，并拥有自己独特的功能，如：计算属性
-- 开源，社区活跃度高
 
-## Vue.js 的两大核心要素
-### 数据驱动
-![](dataDriver.png)
-当你把一个普通的 JavaScript 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 
-把这些属性全部转为 getter/setter。Object.defineProperty 是 ES5 中一个无法 shim 的特性，
-这也就是为什么 Vue 不支持 IE8 以及更低版本浏览器。
-
-每个组件实例都有相应的 watcher 实例对象，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 setter 被调用时，会通知
- watcher 重新计算，从而致使它关联的组件得以更新。
-
-组件化
-- 页面上每个独立的可交互的区域视为一个组件
-- 每个组件对应一个工程目录，组件所需的各种资源在这个目录下就近维护
-- 页面不过是组件的容器，组件可以嵌套自由组合（复用）形成完整的页面
-
-### Vue生命周期 
-- created: 比如钩子可以用来在一个实例被创建之后执行代码：
-- mounted
-- updated
-- destroyed 
 
 ## 参考资料
 
