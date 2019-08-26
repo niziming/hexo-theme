@@ -1,10 +1,10 @@
 ---
-title: "Axios学习-实现异步通信"
+title: "Axios学习01-实现异步通信"
 catalog: true
 date: 2019-08-18 10:22:38
 subtitle:
 header-img:
-tags: [Axios, Vue, 异步通信]
+tags: [Axios, Vue]
 ---
 
 # Vue学习记录
