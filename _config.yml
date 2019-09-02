@@ -26,11 +26,11 @@ SEOTitle: 倪子铭 | Blog
 email: e-mail_address
 description: ""
 keyword: ""
-header-img: /img/header_img/home.png
+header-img: /img/header_img/home.jpg
 article-img: /img/article_header/article_bg.jpg
-404-img: /img/header_img/404.png
+404-img: /img/header_img/404.jpg
 signature: false #show signature
-signature-img: img/signature/BeanTechSign-white.png 
+signature-img: img/signature/BeanTechSign-white.png
 
 # SNS settings
 # RSS: false
@@ -159,7 +159,7 @@ archive_generator:
   yearly: true
   monthly: true
   daily: false
-  
+
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
@@ -170,7 +170,7 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
-  
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 
@@ -193,11 +193,11 @@ markdown:
 # reference: https://github.com/metowolf/MetingJS & https://github.com/MoePlayer/APlayer
 metingjs: false
 data-id: 2423410161
-data-server: netease  
+data-server: netease
 data-type: playlist
 data-fixed: true
   # data-mini:
-  # data-autoplay:    
+  # data-autoplay:
 
 # Reward
 reward: false

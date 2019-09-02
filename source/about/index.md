@@ -3,7 +3,7 @@ layout: "about"
 title: "About"
 date: 2017-10-03 10:48:33
 description: "You only get a wand when you enter Hogwarts School of Witchcraft and Wizardry. That's when you start learning magic."
-header-img: "/img/header_img/about.png"
+header-img: "/img/header_img/about.jpg"
 aplayer: true
 fixed: false
 ---
