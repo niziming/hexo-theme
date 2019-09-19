@@ -1,5 +1,5 @@
 ---
-title: Docker学习06-Dockerfile定制镜像
+title: Docker学习06-Dockerfile定制镜像01
 catalog: true
 date: 2019-09-18 13:11:55
 subtitle:
@@ -91,8 +91,7 @@ exit
 	- :表示映射
 - 在web端查看有没有hello docker tomcat
 发现没有
-
-**notice** 因为镜像里面的东西不可以不可更改,可更改的是容器里面的内容.所有如果想将hello docker tomcat显示在Browser上需要与容器交互.
+**notice** docker的沙箱机制隔离机制.这里比较细,需要的搜索下资料.
 
 - 另外登录一个用户查看正在运行的docker容器
 查看正在运行的容器`docker ps` 
@@ -100,12 +99,34 @@ exit
 beae6fea7aa7        tomcat              "catalina.sh run"   24 seconds ago      Up 24 seconds       0.0.0.0:8081->8080/tcp   thirsty_jang
 ~~~
 
+8080端口,宿主机本身的tomcat 版本为7.0.76
+![](8080.png)
+
+8081端口,Docker的tomcat容器 版本为8.5.45
+![](8081.png)
+
+
+
+- 交互的方式启动容器
+	- docker run -p 8081:8080 tomcat
+
 - 交互的方式进入容器
 	- docker exec -it 容器id bash
-[root@MyCentOS]~# docker exec -it 17d3f7ee5096 bash
-root@17d3f7ee5096:/usr/local/tomcat#
-- 交互的方式启动容器
-	- docker run
+~~~
+➜  ~ sudo docker exec -it 7db bash
+root@7db5c8940e5a:/usr/local/tomcat# 
+root@7db5c8940e5a:/usr/local/tomcat# cd webapps/
+root@7db5c8940e5a:/usr/local/tomcat/webapps# cd ROOT
+root@7db5c8940e5a:/usr/local/tomcat/webapps/ROOT# echo "hello docker tomcat" >> index.jsp
+root@7db5c8940e5a:/usr/local/tomcat/webapps/ROOT#
+root@7db5c8940e5a:/usr/local/tomcat/webapps/ROOT# cat index.jsp
+</html>
+hello docker tomcat
+~~~
+此时我们看到,hello docker tomcat 已经在文件中了
+打开浏览器查看结果
+
+![](hellodocker)
 
 - 查看所有容器`docker ps -a`
 ~~~
