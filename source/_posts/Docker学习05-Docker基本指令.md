@@ -28,6 +28,25 @@ docker image ls 还支持强大的过滤器参数 --filter
 想查看某个位置之前的镜像也可以，只需要把 since 换成 before 即可。
 此外，如果镜像构建时，定义了 LABEL，还可以通过 LABEL 来过滤。
 
+## 容器
+列出正在运行的容器
+- docker ps
+列出所有容器
+- docker ps -a
+列出所有容器的ID
+- docker ps -a -q
+删除所有容器
+- docker rm $(docker ps -a -q)
+~~~ linux
+[root@MyCentOS]/usr/local/docker/tomcat# docker rm $(docker ps -a -q)
+4482c4ae4f59
+14fe6134c78e
+1f86f8427885
+d1ec8e51953a
+b0e7101ee330
+33d9191d7b3b
+~~~
+
 ## 以特定格式显示
 利用 docker image ls 把所有的虚悬镜像的 ID 列出来，然后才可以交给 docker image rm 命令作为参数来删除指定的这些镜像，这个时候就用到了 -q 参数。
 - docker image ls -q
