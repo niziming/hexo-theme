@@ -28,7 +28,7 @@ docker image ls 还支持强大的过滤器参数 --filter
 想查看某个位置之前的镜像也可以，只需要把 since 换成 before 即可。
 此外，如果镜像构建时，定义了 LABEL，还可以通过 LABEL 来过滤。
 
-## 容器
+## 容器操作
 列出正在运行的容器
 - docker ps
 列出所有容器
@@ -46,6 +46,31 @@ d1ec8e51953a
 b0e7101ee330
 33d9191d7b3b
 ~~~
+从新启动容器
+- docker restart <id>或者<name>
+自定义容器名称启动时
+- docker run -p 8081:8080 --name mytomcat tomcat
+停用容器
+- docker stop <容器id>
+### 守护态运行
+更多的时候，需要让 Docker 在后台运行而不是直接把执行命令的结果输出在当前宿主机下。此时，可以通过添加 -d 参数来实现。避免每次都需要开一个线程进去操作容器
+
+`sudo docker run -p 8082:8080 --name mytomcat2 -d tomcat`
+~~~
+sudo docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS              PORTS                    NAMES
+d53272c36764        tomcat              "catalina.sh run"   About a minute ago   Up About a minute   0.0.0.0:8082->8080/tcp   mytomcat2
+849e5b576998        myproject           "catalina.sh run"   4 hours ago          Up 19 minutes       0.0.0.0:8081->8080/tcp   elastic_panini
+~~~
+结果查看:
+- 8081
+![](1.png)
+- 8082
+![](2.png)
+
+进程
+	主线程
+	工作线程
 
 ## 以特定格式显示
 利用 docker image ls 把所有的虚悬镜像的 ID 列出来，然后才可以交给 docker image rm 命令作为参数来删除指定的这些镜像，这个时候就用到了 -q 参数。
