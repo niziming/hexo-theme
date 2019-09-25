@@ -17,7 +17,7 @@ root: /
 #permalink: :year/:month/:day/:title/
 permalink: :category/:title/
 permalink_defaults:
-  lang: en
+  lang: zh
 
 #Custom Setting Start
 
