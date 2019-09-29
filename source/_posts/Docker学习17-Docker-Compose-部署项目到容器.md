@@ -144,5 +144,8 @@ Creating web   ... done
 ## 监听日志的变化
 docker logs -f myshop
 
+## 查看结果
+![](3.png)
+
 ## 参考资料
-> 
+> https://www.funtl.com/zh/docker-compose/Docker-Compose-模板文件.html#build
