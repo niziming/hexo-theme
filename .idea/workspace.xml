@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e4fb783-4d18-4b63-84d7-45155b9935f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7e4fb783-4d18-4b63-84d7-45155b9935f1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +39,8 @@
         <entry file="file://$PROJECT_DIR$/source/_posts/Docker学习14-Docker-Compose-的使用.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="707">
-                <caret line="94" selection-start-line="94" selection-end-line="94" />
+              <first_editor relative-caret-position="285">
+                <caret line="15" selection-start-line="15" selection-end-line="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -63,7 +61,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="backup" />
       </map>
     </option>
     <option name="RESET_MODE" value="HARD" />
@@ -83,10 +81,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="557" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="719" />
+    <option name="y" value="207" />
     <option name="width" value="1202" />
-    <option name="height" value="1047" />
+    <option name="height" value="835" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -239,15 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569727906670</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="backup branch">
+      <created>1569728506785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569728506785</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5675000" />
+    <option name="totallyTimeSpent" value="5683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="557" y="0" width="1202" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34715027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -336,7 +341,8 @@
     <MESSAGE value="项目自动文件更新" />
     <MESSAGE value="新博客" />
     <MESSAGE value="文件误删后的恢复,'rm'轻易不可使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="文件误删后的恢复,'rm'轻易不可使用" />
+    <MESSAGE value="backup branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="backup branch" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/source/_posts/博客模板备注.md" />
@@ -441,8 +447,8 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/Docker学习14-Docker-Compose-的使用.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="707">
-            <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <first_editor relative-caret-position="285">
+            <caret line="15" selection-start-line="15" selection-end-line="15" />
           </first_editor>
           <second_editor />
         </state>
