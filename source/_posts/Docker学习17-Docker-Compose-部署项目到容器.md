@@ -22,8 +22,6 @@ tomcat
 
 ## 创建项目tripweb
 
-
-
 version: '3'
 services:
   tomcat:
