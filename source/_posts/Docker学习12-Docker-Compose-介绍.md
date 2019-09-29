@@ -1,5 +1,5 @@
 ---
-title: Docker学习12-Docker-Compose01
+title: Docker学习12-Docker-Compose-介绍
 catalog: true
 date: 2019-09-27 17:51:00
 subtitle:
@@ -7,7 +7,7 @@ header-img:
 tags: [Docker, Docker Compose]
 ---
 
-# 什么事Docker Compose?
+# 什么是Docker Compose?
 Docker Compose 是 Docker 官方编排（Orchestration）项目之一，负责快速的部署分布式应用。
 
 ## 概况
