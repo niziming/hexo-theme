@@ -41,7 +41,7 @@ services:
     ports:
       - 8081:8080
     volumes: # 挂载卷
-      - /usr/local/docker/tripweb/ROOT:/usr/local/webapps/ROOT
+      - /usr/local/docker/tripweb/ROOT:/usr/local/tomcat/webapps/ROOT
   mysql:
     restart: always
     image: mysql:5.7.22
@@ -140,6 +140,9 @@ Creating mysql ... done
 Creating web   ... done
 [root@MyCentOS]/usr/local/docker/tripweb/ROOT# 
 ~~~
+
+## 监听日志的变化
+docker logs -f myshop
 
 ## 参考资料
 > 
