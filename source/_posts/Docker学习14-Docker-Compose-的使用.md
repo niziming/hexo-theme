@@ -89,11 +89,6 @@ d53272c36764        tomcat              "catalina.sh run"        5 days ago     
 ~~~
 ## 浏览器访问
 ![](1.png)
-
-## compose部署其他的服务
-~~~
-
-~~~
     
 ## 参考资料
 > https://www.funtl.com/zh/docker-compose/Docker-Compose-%E4%BD%BF%E7%94%A8.html#%E5%9C%BA%E6%99%AF
