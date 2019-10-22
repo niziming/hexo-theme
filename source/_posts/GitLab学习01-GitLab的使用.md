@@ -251,3 +251,4 @@ d473292982f8        tomcat                        "catalina.sh run"        8 day
 > https://www.bilibili.com/video/av29384041/?p=48
 > https://www.funtl.com/zh/gitlab/%E5%9F%BA%E4%BA%8E-Docker-%E5%AE%89%E8%A3%85-GitLab.html
 > http://www.mamicode.com/info-detail-2230071.html
+> http://www.bubuko.com/infodetail-2282456.html

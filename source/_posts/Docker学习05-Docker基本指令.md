@@ -6,6 +6,14 @@ subtitle:
 header-img:
 tags: [Docker]
 ---
+# linux Docker命令
+
+启动        systemctl start docker
+守护进程重启   sudo systemctl daemon-reload
+重启 docker 服务   systemctl restart  docker
+重启 docker 服务  sudo service docker restart
+关闭 docker   service docker stop   
+关闭 docker  systemctl stop docker
 
 # Docker基本指令
 从 Docker 镜像仓库获取镜像的命令是 docker pull
