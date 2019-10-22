@@ -7,7 +7,6 @@ header-img:
 tags: [Docker]
 ---
 # linux Docker命令
-
 启动        systemctl start docker
 守护进程重启   sudo systemctl daemon-reload
 重启 docker 服务   systemctl restart  docker
