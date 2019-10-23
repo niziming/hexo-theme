@@ -6,7 +6,7 @@ date: 2019-10-22 15:19:32
 subtitle:
 header-img:
 ---
-# Nexus学习01-Nexus简介与安装
+# Nexus学习00-Nexus简介与安装
 Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。
 2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
 
@@ -74,8 +74,6 @@ Creating nexus ... done
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 5e897f337f34        sonatype/nexus3     "sh -c ${SONATYPE_DI…"   30 seconds ago      Up 2 seconds        0.0.0.0:8082->8081/tcp   nexus
 ~~~
-## 查看结果
-![](1.png)
 
 ## 登陆Nexus
 查看admin密码
@@ -90,6 +88,16 @@ bash-4.4$ cat admin.password
 75c4c214-cdd2-48d0-845c-03c28da34abfbash-4.4$ #  
 ~~~
 
+## 查看结果
+![](1.png)
+
+### 查看设置
+![](2.png)
+
+### 用户界面
+![](3.png)
+### admin用户界面
+![](4.png)
 
 ## 参考资料
 > 
