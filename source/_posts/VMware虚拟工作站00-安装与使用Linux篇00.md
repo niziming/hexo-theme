@@ -77,11 +77,15 @@ header-img:
 - 选择镜像地址,这里选择阿里云镜像,后面系统会安装东西.这样会快些.
 `http://mirrors.aliyun.com/ubuntu`
 ![](32.png)
-- 磁盘挂载,我选择的默认分配
+- 磁盘挂载,我选择的LVM
     - Use An entire Disk-使用整个磁盘
     - Use An Entire Disk And Set Up LVM-使用整个磁盘并设置
     - Manual-手动
     - Back-返回
+LVM是磁盘扩容技术，一定要选择LVM
+    500GB C /path
+    500GB D /path
+    如果没有需那种LVM那么扩容以后无法合并挂载点
 ![](33.png)
 ![](34.png)
     - Filesystem setup   文件系统设置
