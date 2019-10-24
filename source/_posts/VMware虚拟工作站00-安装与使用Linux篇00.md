@@ -100,6 +100,7 @@ header-img:
 - 选择重启
 接着是一个安装过程，请耐心等待，安装完成后会在 [View full log] 按钮下多出一个 [Reboot Now] 按钮。
 ![](41.png)
+![](42.png)
 
 
 
