@@ -1,5 +1,5 @@
 ---
-title: Nexus学习01-Nexus简介与安装
+title: Nexus学习00-Nexus简介与安装
 catalog: true
 tags: []
 date: 2019-10-22 15:19:32

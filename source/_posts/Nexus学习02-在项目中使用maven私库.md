@@ -1,12 +1,12 @@
 ---
-title: Nexus学习00-在项目中使用maven私库
+title: Nexus学习02-在项目中使用maven私库
 catalog: true
 tags: []
 date: 2019-10-23 10:55:40
 subtitle:
 header-img:
 ---
-# Nexus学习01-在项目中使用maven私库
+# Nexus学习02-在项目中使用maven私库
 
 ## 配置Maven的setting.xml文件
 
@@ -114,7 +114,33 @@ a cn.zm:trip-web:1.0.0-SNAPSHOT/maven-metadata.xml: Could not transfer metadata 
 将的 Deployment Policy 修改为 “Allow Redeploy”
 
 ![](4.png)
-
+### 修改pom.xml配置
+~~~
+<!-- 发行版本私服仓库 -->
+	<server>
+      <id>maven-releases</id>
+      <username>admin</username>
+      <password>admin</password>
+	  <!--鉴权时使用的私钥密码。-->
+	  <passphrase>admin</passphrase>
+	  <!--文件被创建时的权限。如果在部署的时候会创建一个仓库文件或者目录，这时候就可以使用权限（permission）。这两个元素合法的值是一个三位数字，其对应了unix文件系统的权限，如664，或者775。 -->
+	  <filePermissions>664</filePermissions>
+      <!--目录被创建时的权限。 -->
+      <directoryPermissions>775</directoryPermissions>
+   	</server>
+	<!-- 快照版本私服仓库 -->
+	<server>
+      <id>maven-snapshots</id>
+      <username>admin</username>
+      <password>admin</password>
+	  <!--鉴权时使用的私钥密码。-->
+	  <passphrase>admin</passphrase>
+	  <!--文件被创建时的权限。如果在部署的时候会创建一个仓库文件或者目录，这时候就可以使用权限（permission）。这两个元素合法的值是一个三位数字，其对应了unix文件系统的权限，如664，或者775。 -->
+	  <filePermissions>664</filePermissions>
+      <!--目录被创建时的权限。 -->
+      <directoryPermissions>775</directoryPermissions>
+    </server>
+~~~
 
 ## 参考资料
 > 
