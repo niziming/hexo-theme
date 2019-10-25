@@ -106,9 +106,18 @@ LVM是磁盘扩容技术，一定要选择LVM
 ![](41.png)
 ![](42.png)
 
-## 成功驱动
+## 成功启动
 ![](43.png)
 
+## Ubuntu server 设置 root 密码
+ubuntu server 安装的时候要你新建一个用户，安装完成后，你需要手动开启 root。
+`sudo passwd root`
+根据提示依次输入:
+1. 输入你当前用户的密码
+2. 输入你希望的 root 用户的密码
+3. 确认密码
+
+设置完成。
 
 ## 参考资料
-> 
+> https://blog.csdn.net/ruo_62/article/details/90233501
