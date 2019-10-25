@@ -17,6 +17,8 @@ Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维�
 - 提供新的管理接口，以及增强对自动任务的管理。
 
 ## docker 安装nexus3
+使用`docker pull sonatype/nexus3`命令拉去nexus3
+
 ~~~ 
 [root@MyCentOS]/usr/local/docker/gitlab# docker pull sonatype/nexus3
 Using default tag: latest
