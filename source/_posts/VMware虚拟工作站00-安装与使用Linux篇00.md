@@ -119,5 +119,40 @@ ubuntu server 安装的时候要你新建一个用户，安装完成后，你需
 
 设置完成。
 
+## 安装ssh
+### 检查软件是否安装
+~~~
+apt-cache policy openssh-client openssh-server
+~~~
+### 安装服务端
+~~~
+apt-get install openssh-server
+~~~
+### 安装客户端
+~~~
+apt-get install openssh-client
+~~~
+
+应该是sshd的设置不允许root用户用密码远程登录
+ 
+1. 修改 vim /etc/ssh/sshd_config
+ 
+找到# Authentication:
+~~~
+LoginGraceTime 120
+PermitRootLogin without passwd
+StrictModes yes
+~~~
+改成
+~~~
+# Authentication:
+LoginGraceTime 120
+PermitRootLogin yes
+StrictModes yes
+~~~
+2. 重启ssh
+
+`systemctl restart sshd`
+
 ## 参考资料
 > https://blog.csdn.net/ruo_62/article/details/90233501
