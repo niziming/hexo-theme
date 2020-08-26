@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+require(
+    [...], function (ec) {
+    };
+myChart.setOption(option);
+var config = require('echarts/config');
+var _zr = myChart.getZrender();  //获取zrender示例
+var TextShape = require('zrender/shape/Text');  //调用zrender里面的方法来解决
+var textShape = new TextShape({
+    style: {
+        x: _zr.getWidth() / 2,
+        y: _zr.getHeight() / 2,
+        color: '#666',
+        text: '总资产\n200,000.00',
+        textAlign: 'center',
+        textFont: 'bold 30px verdana'
+    }
+});
+_zr.addShape(textShape);       //鼠标移到图标上时，将textshape的颜色设置的和背景一样       myChart.on(config.EVENT.HOVER, function () {
+_zr.modShape(textShape.id, {style: {color: '#fff'}});
+})
+;
+
+myChart.on(config.EVENT.MOUSEOUT, function () {
+    _zr.modShape(textShape.id, {style: {color: '#666'}});
+})
+myChart.refresh();
+}
+)
+;
+</script>
 </body>
 </html>

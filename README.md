@@ -22,3 +22,4 @@ hexo clean && hexo generate # 清理并且生成项目
 hexo server # 在本地运行hexo服务器
 hexo deploy # 部署在远端
 ~~~
+

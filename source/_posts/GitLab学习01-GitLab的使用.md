@@ -19,7 +19,6 @@ GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个�
 - 异地开发
 - 开源的第三方平台用
 - 自己架设Git托管平台
-
 ## 安装GitLab
 
 Docker官网汉化版GitLab

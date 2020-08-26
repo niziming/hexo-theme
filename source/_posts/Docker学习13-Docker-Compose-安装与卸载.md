@@ -71,10 +71,15 @@ You need to restart docker to take effect: sudo systemctl restart docker
 
 `
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+这个的下载速度会快些
+~~~
+curl -L https://get.daocloud.io/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+~~~
 ~~~
 [root@MyCentOS]~# curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
+                                 Dload  Upload   Total   Spent    Left  SpeedS
 100   617    0   617    0     0    923      0 --:--:-- --:--:-- --:--:--   923
 100 11.2M  100 11.2M    0     0   634k      0  0:00:18  0:00:18 --:--:--  396k
 

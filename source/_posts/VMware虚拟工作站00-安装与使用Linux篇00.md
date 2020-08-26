@@ -153,6 +153,29 @@ StrictModes yes
 2. 重启ssh
 
 `systemctl restart sshd`
+## 安装zsh 和 oh-my-zsh
+1. 安装 zsh
+`apt install zsh -y`
+zsh 设为默认 shell
+chsh -s /bin/zsh
+
+2. 安装 oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+或
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+3. 插件
+安装 incr 自动补全插件推荐
+
+cd ~/.oh-my-zsh/plugins/
+mkdir incr && cd incr
+wget http://mimosa-pudica.net/src/incr-0.2.zsh
+vi ~/.zshrc
+插入下面这条
+~~~
+source ~/.oh-my-zsh/plugins/incr/incr*.zsh
+~~~
+source ~/.zshrc
 
 ## 参考资料
 > https://blog.csdn.net/ruo_62/article/details/90233501
