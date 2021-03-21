@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Your Title
-subtitle: This is hexo theme
-author: John Doe
-language:
+title: 倪子铭
+subtitle: 个人博客
+author: 倪子铭
+language: zn_ch
 timezone:
 
 # URL
@@ -15,27 +15,30 @@ url: http://yoursite-url       # Note: don't forget to modify the CNAME file to 
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+  lang: zh
 
 #Custom Setting Start
 
 # Site settings
-SEOTitle: Beantech | 豆科技
-email: beantech@gmail.com
+SEOTitle: 倪子铭 | Blog
+email: jermainenee@gmail.com
 description: ""
 keyword: ""
-header-img: img/header_img/home-bg-2-dark.png
-signature: true #show signature
-signature-img: img/signature/BeanTechSign-white.png 
+header-img: img/header_img/home.jpg
+article-img: img/article_header/article_bg.jpg
+404-img: img/header_img/404.jpg
+signature: false #show signature
+signature-img: img/signature/BeanTechSign-white.png
 
 
 # SNS settings
 # RSS: false
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
-github_username:    YenYuHsuan
+github_username: niziming
 # twitter_username:   Demonbane_x
-facebook_username:  YenYuHsuan
-linkedin_username:  yu-hsuan-yen
+# facebook_username:  YenYuHsuan
+# linkedin_username:  yu-hsuan-yen
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -60,18 +63,19 @@ ga_domain: yoursite
 
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
-sidebar-about-description: "Hi, i'm John Doe"
-sidebar-avatar: img/ironman-draw.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Hukuna matata!!!"
+sidebar-avatar: img/me.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
 - short-about
 - recent-posts
 - friends-blog
-# - archive
+- archive
 # - category
 
 # widget behavior
 ## Archive
+archives-img: /img/header_img/archives-widget.png
 archive_type: 'monthly'
 show_count: true
 
@@ -83,19 +87,14 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 ## Friends
 friends: [
-    {
-        title: "Bean Tech",
-        href: "http://beantech.org"
-    },{
-        title: "Kaijun's Blog",
-        href: "http://blog.kaijun.rocks"
-    },{
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "It Helps SEO",
-        href: "#"
-    }
+  {
+    title: "豆瓣 倪子铭",
+    href: "https://www.douban.com/people/80901919/"
+  },
+  {
+    title: "GitHub 倪子铭",
+    href: "https://github.com/niziming"
+  }
 ]
 
 
@@ -152,7 +151,7 @@ archive_generator:
   yearly: true
   monthly: true
   daily: false
-  
+
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 markdown:
@@ -163,7 +162,7 @@ markdown:
     linkify: true
     typographer: true
     quotes: '“”‘’'
-  
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -173,9 +172,9 @@ theme: beantech
 sitemap:
   path: sitemap.xml
 
-# Deployment
+#Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://github.com/YenYuHsuan/hexo-theme-beantech.git
-  branch: gh-page
+- type: git
+  repo: git@github.com:niziming/niziming.github.io.git
+  branch: master
