@@ -180,10 +180,9 @@ sitemap:
 #Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@github.com:niziming/niziming.github.io.git
-  branch: master
-
+#- type: git
+#  repo: git@github.com:niziming/niziming.github.io.git
+#  branch: master
 - type: git
   repo: git@35.236.130.209:jermainenee/usr/share/nginx/hexo-blog
   branch: master
