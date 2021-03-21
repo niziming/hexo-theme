@@ -1,7 +1,7 @@
 ---
 title: GCP上搭建虚拟服务器VPS
 catalog: true
-tags: [GCP]
+tags: [GCP, VPS]
 date: 2021-03-20 11:10:24
 subtitle:
 header-img:

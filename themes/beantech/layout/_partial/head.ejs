@@ -7,7 +7,7 @@
     <meta name="keyword"  content="<%= config.keyword %>">
     <link rel="shortcut icon" href="<%= config.root %>img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<script async defer src="https://buttons.github.io/buttons.js"></script>-->
     <title>
         <% if (page.title) { %>
           <%= page.title + ' - ' + config.SEOTitle %>
@@ -21,9 +21,9 @@
     <!-- Bootstrap Core CSS -->
     <%- css('css/bootstrap.min.css') %>
 
-    <!-- Custom CSS --> 
+    <!-- Custom CSS -->
     <%- css('css/beantech.min.css')%>
-    
+
     <!-- Pygments Highlight CSS -->
     <%- css('css/highlight') %>
 
@@ -58,3 +58,5 @@
     <!-- ga & ba script hoook -->
     <script></script>
 </head>
+<!-- buttons JavaScript -->
+<%- js('js/buttons.js') %>
