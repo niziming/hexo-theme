@@ -2,16 +2,16 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        <% if (is_home()) { %>
-            background-image: url('<%= config.root + config["header-img"] %>')
-            /*config*/
-        <%} else if (is_post()){%>
-            background-image: url('<%= config.root + config["article-img"] %>')
-            /*post*/
-        <%} else {%>
-            background-image: url('<%= config.root + config["header-img"] %>')
-            /*page*/
-        <%} %>
+    <% if (is_home()) { %>
+        background-image: url('<%= config.root + config["header-img"] %>')
+        /*config*/
+    <%} else if (is_post()){%>
+        background-image: url('<%= page["header-img"] || config.root + config["article-img"]  %>')
+        /*post*/
+    <%} else {%>
+        background-image: url('<%= page["header-img"] || config.root + config["archives-img"] %>')
+        /*page*/
+    <%} %>
     }
     <% if (config.signature) {%>
     #signature{

@@ -36,7 +36,7 @@ signature-img: img/signature/BeanTechSign-white.png
 # RSS: false
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
-github_username: niziming
+github_username: /localhost/
 # twitter_username:   Demonbane_x
 # facebook_username:  YenYuHsuan
 # linkedin_username:  yu-hsuan-yen
@@ -46,7 +46,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings 领英设置
-disqus_username: niziming
+disqus_username: your-disqus-ID
 
 # Duoshuo settings
 # duoshuo_username: kaijun
@@ -72,11 +72,11 @@ widgets:
 - recent-posts
 - friends-blog
 - archive
-# - category
+#- category
 
 # widget behavior
 ## Archive
-archives-img: /img/header_img/archives-widget.png
+archives-img: img/header_img/archives-widget.png
 archive_type: 'monthly'
 show_count: true
 
