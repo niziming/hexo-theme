@@ -185,5 +185,5 @@ deploy:
   branch: master
 
 - type: git
-  repo: jermainenee@35.236.130.209:22/usr/share/nginx/hexo-blog
+  repo: git@35.236.130.209:jermainenee/usr/share/nginx/hexo-blog
   branch: master
