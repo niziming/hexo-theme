@@ -46,7 +46,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings 领英设置
-disqus_username: your-disqus-ID
+#disqus_username: your-disqus-ID
 
 # Duoshuo settings
 # duoshuo_username: kaijun
