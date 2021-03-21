@@ -45,8 +45,8 @@ github_username: niziming
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-# Disqus settings
-disqus_username: your-disqus-ID
+# Disqus settings 领英设置
+disqus_username: niziming
 
 # Duoshuo settings
 # duoshuo_username: kaijun
@@ -94,10 +94,14 @@ friends: [
   },
   {
     title: "GitHub 倪子铭",
-    href: "https://github.com/niziming"
+    href: "https://github.com/niziming",
+    ghbtns: ""
   }
 ]
 
+#github
+github:
+  ghbtns: https://ghbtns.com/github-btn.html?user=niziming&repo=hexo-blog&type=star&count=true
 
 #Custom Setting End
 
