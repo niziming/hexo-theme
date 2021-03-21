@@ -6,15 +6,15 @@
 title: 倪子铭
 subtitle: 个人博客
 author: 倪子铭
-language:
+language: zn_ch
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # Note: don't forget to modify the CNAME file to your url
-url: https://github.com/niziming/niziming.github.io/blob/master/
-root: /
-#permalink: :year/:month/:day/:title/
+# url: https://github.com/niziming/niziming.github.io/blob/master/
+# root: /blog/
+# permalink: :year/:month/:day/:title/
 permalink: :category/:title/
 permalink_defaults:
   lang: zh
@@ -51,7 +51,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # Duoshuo settings
 # duoshuo_username: kaijun
 # Share component is depend on Comment so we can NOT use share only.
-#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
 # Analytics settings
@@ -221,13 +221,18 @@ theme: huweihuang
 sitemap:
   path: sitemap.xml
 
+
 Deployment:
 # Docs: https://hexo.io/docs/deployment.html
  repository: git@github.com:niziming/niziming.github.io.git
  branch: master
 
 deploy:
-  type: git
-  repository: git@github.com:niziming/niziming.github.io.git
+- type: git
+  repo: git@github.com:niziming/niziming.github.io.git
   branch: master
-  message: Update CNAME
+#- type: git
+# repo: jermainenee@35.185.153.230:/var/repo/repo.git
+# branch: master
+
+# message: Update CNAME
