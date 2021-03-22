@@ -106,7 +106,6 @@ github:
 #Custom Setting End
 
 
-
 # Directory
 source_dir: source
 public_dir: public
@@ -176,6 +175,12 @@ theme: beantech
 #sitemap
 sitemap:
   path: sitemap.xml
+
+# favicon config
+## Place your favicon.png to /source directory
+favicon: img/favicon.png
+
+
 
 #error_404:
 #  enable: true
