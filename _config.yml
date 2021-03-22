@@ -59,7 +59,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
-ga_domain: yoursite
+ga_domain: www.niziming.tk
 
 
 # Sidebar settings
@@ -177,6 +177,10 @@ theme: beantech
 sitemap:
   path: sitemap.xml
 
+#error_404:
+#  enable: true
+#  subtitle: "Page Not Found"
+
 #Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
@@ -184,5 +188,5 @@ deploy:
   repo: git@github.com:niziming/niziming.github.io.git
   branch: master
 #- type: git
-#  repo: git@35.236.130.209:/usr/share/nginx/hexo-blog/hexo-blog.git
+#  repo: git@35.236.130.209:jermainenee/usr/share/nginx/hexo-blog/hexo-blog.git
 #  branch: master
