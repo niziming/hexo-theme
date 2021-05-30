@@ -1,5 +1,5 @@
 ---
-title: 博客模板备注及使用方法
+rtitle: 博客模板备注及使用方法
 catalog: true
 date: 2019-06-23 10:41:27
 subtitle:
@@ -29,7 +29,9 @@ top: 1
 - Beantech 
 - 胡伟煌
 ## 安装Hexo
+~~~
 npm install hexo-cli -g
+~~~
 如果下载速度慢的可以将npm的下载源换成国内镜像,推荐阿里巴巴的镜像.
 
 ## 使用博客模板
@@ -56,9 +58,22 @@ hexo deploy # 部署在远端
 
 如果使用了markdown编辑器需要配置编辑器的相对路径.
 
+### 如果图片路径报错
+
 不然部署静态路径时会报错
 
-## 原来作者README文档如下
+~~~
+设置post_asset_folder  为 true, 安装插件 asset-image
+npm install https://github.com/CodeFalling/hexo-asset-image
+或者
+npm install https://github.com/xcodebuild/hexo-asset-image
+设置图片为相对路径
+hexo clean && hexo generate && hexo s 运行查看
+~~~
+
+备注: 因为国内环境github拉取会非常慢, 我将hexo-asset-image作为资源文件上传到项目根目录下,方便你们复制进node_modules中
+
+## **来作者**README文档如下
 
 > Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
 >
